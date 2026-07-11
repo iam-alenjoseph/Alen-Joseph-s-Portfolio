@@ -411,6 +411,177 @@ const gradients = [
     metaText: "text-black/45",
     btnBg: "bg-black hover:bg-black/90 text-white border-black/10"
   },
+  {
+    css: "linear-gradient(135deg, #FD8012 0%, #0084C9 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #BBD1C4 0%, #282E48 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #242527 0%, #424345 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #B69890 0%, #93706A 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #FD746C 0%, #FF9068 100%)",
+    darkText: true,
+    titleText: "text-black",
+    descText: "text-black/70",
+    manifestoText: "text-black/55",
+    metaText: "text-black/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-black/10"
+  },
+  {
+    css: "linear-gradient(135deg, #000000 0%, #434343 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #5514B0 0%, #DBD75C 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #0099F7 0%, #F01712 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #000328 0%, #004E91 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #56AA2E 0%, #A7DF62 100%)",
+    darkText: true,
+    titleText: "text-black",
+    descText: "text-black/70",
+    manifestoText: "text-black/55",
+    metaText: "text-black/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-black/10"
+  },
+  {
+    css: "linear-gradient(135deg, #F85033 0%, #E73827 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #F69E00 0%, #64F28C 100%)",
+    darkText: true,
+    titleText: "text-black",
+    descText: "text-black/70",
+    manifestoText: "text-black/55",
+    metaText: "text-black/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-black/10"
+  },
+  {
+    css: "linear-gradient(135deg, #FEAC60 0%, #C779CF 50%, #4BC0C9 100%)",
+    darkText: true,
+    titleText: "text-black",
+    descText: "text-black/70",
+    manifestoText: "text-black/55",
+    metaText: "text-black/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-black/10"
+  },
+  {
+    css: "linear-gradient(135deg, #BA8A02 0%, #69500D 50%, #181818 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #BF2324 0%, #D8782E 50%, #EFCA34 100%)",
+    darkText: true,
+    titleText: "text-black",
+    descText: "text-black/70",
+    manifestoText: "text-black/55",
+    metaText: "text-black/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-black/10"
+  },
+  {
+    css: "linear-gradient(135deg, #B04490 0%, #D25285 50%, #F15E78 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #414D0B 0%, #727A17 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #225F00 0%, #E4E4D8 100%)",
+    darkText: true,
+    titleText: "text-black",
+    descText: "text-black/70",
+    manifestoText: "text-black/55",
+    metaText: "text-black/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-black/10"
+  },
+  {
+    css: "linear-gradient(135deg, #BA93D6 0%, #8CA5DB 100%)",
+    darkText: true,
+    titleText: "text-black",
+    descText: "text-black/70",
+    manifestoText: "text-black/55",
+    metaText: "text-black/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-black/10"
+  },
 ];
 
 // ─── Hero ──────────────────────────────────────────────────────────────────────
@@ -422,8 +593,8 @@ export const Hero = ({ onOpenResume }: { onOpenResume: () => void }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setPrevSloganIndex(sloganIndex);
-      // Use 195 (Least Common Multiple of 13, 5, and 39) so that we cycle through all slogans and all gradients.
-      setSloganIndex((prev) => (prev + 1) % 195);
+      // Use 3770 (Least Common Multiple of 13, 5, and 58) so that we cycle through all slogans and all gradients.
+      setSloganIndex((prev) => (prev + 1) % 3770);
     }, 5000);
     return () => clearInterval(timer);
   }, [sloganIndex]);
