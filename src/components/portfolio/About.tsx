@@ -66,7 +66,7 @@ export const About = () => {
             {/* Portrait */}
             <div className="w-full md:w-44 h-44 rounded-2xl overflow-hidden shadow-lg border border-border/40 relative shrink-0">
               <img
-                src="/alen.jpg"
+                src={`${import.meta.env.BASE_URL}alen.jpg`}
                 alt="Alen Joseph"
                 className="w-full h-full object-cover object-center transition-all duration-500 hover:scale-105"
               />

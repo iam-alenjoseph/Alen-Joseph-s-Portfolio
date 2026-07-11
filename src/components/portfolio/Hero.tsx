@@ -61,6 +61,42 @@ const childVariants = {
 
 const gradients = [
   {
+    css: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fec194 100%)",
+    darkText: true,
+    titleText: "text-black",
+    descText: "text-black/70",
+    manifestoText: "text-black/55",
+    metaText: "text-black/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-black/10"
+  },
+  {
+    css: "linear-gradient(135deg, #134e5e 0%, #71b280 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #ece9e6 0%, #0f2027 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #300030 0%, #800000 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
     css: "linear-gradient(135deg, #534b2a 0%, #a29267 50%, #dcd7c5 100%)",
     darkText: true,
     titleText: "text-black",

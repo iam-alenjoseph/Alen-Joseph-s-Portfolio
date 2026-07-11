@@ -144,7 +144,7 @@ const ImageSlider = ({ images }: { images: string[] }) => {
           {images.map((src, i) => (
             <motion.img
               key={src}
-              src={src}
+              src={src.startsWith('/') ? `${import.meta.env.BASE_URL}${src.slice(1)}` : src}
               animate={{
                 opacity: i === current ? 1 : 0,
                 scale: i === current ? 1 : 1.015,
@@ -380,7 +380,7 @@ export const Projects = () => {
                     <ImageSlider images={p.images} />
                   ) : (
                     <img
-                      src={p.imageUrl || "/portfolio_mockup.png"}
+                      src={p.imageUrl ? (p.imageUrl.startsWith('/') ? `${import.meta.env.BASE_URL}${p.imageUrl.slice(1)}` : p.imageUrl) : `${import.meta.env.BASE_URL}portfolio_mockup.png`}
                       alt={p.title}
                       className="w-full h-auto object-cover rounded-xl border border-border"
                       style={{ aspectRatio: p.aspect || "16/10" }}

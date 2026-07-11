@@ -35,12 +35,7 @@ export function AuroraTextEffect({
   className,
   textClassName,
   fontSize = "clamp(3rem, 8vw, 7rem)",
-  colors = {
-    first: "bg-cyan-400",
-    second: "bg-yellow-400",
-    third: "bg-green-400",
-    fourth: "bg-primarylw",
-  },
+  colors,
   blurAmount = "blur-lg",
   animationSpeed = {
     border: 6,
@@ -50,6 +45,14 @@ export function AuroraTextEffect({
     fourth: 13,
   },
 }: AuroraTextEffectProps) {
+  // Define fallback colors matching the user's gradients
+  const activeColors = {
+    first: colors?.first ?? "linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fec194 100%)",
+    second: colors?.second ?? "linear-gradient(135deg, #134e5e 0%, #71b280 100%)",
+    third: colors?.third ?? "linear-gradient(135deg, #ece9e6 0%, #0f2027 100%)",
+    fourth: colors?.fourth ?? "linear-gradient(135deg, #300030 0%, #800000 100%)",
+  };
+
   // Define keyframes as a style object
   const keyframes = `
     @keyframes aurora-1 {
@@ -85,6 +88,33 @@ export function AuroraTextEffect({
     }
   `;
 
+  const renderLayer = (colorVal?: string, animationName = "", speed = 5) => {
+    if (!colorVal) return null;
+    const isCss = colorVal.startsWith("linear-gradient") || 
+                  colorVal.startsWith("radial-gradient") || 
+                  colorVal.startsWith("#") || 
+                  colorVal.startsWith("rgb") || 
+                  colorVal.startsWith("hsl");
+    
+    return (
+      <div
+        className={cn(
+          "absolute w-[60vw] h-[60vw] rounded-[37%_29%_27%_27%/28%_25%_41%_37%] filter mix-blend-overlay",
+          isCss ? "" : colorVal,
+          blurAmount
+        )}
+        style={{
+          background: isCss ? colorVal : undefined,
+          animationName: `aurora-border, ${animationName}`,
+          animationDuration: `${animationSpeed.border}s, ${speed}s`,
+          animationTimingFunction: "ease-in-out, ease-in-out",
+          animationIterationCount: "infinite, infinite",
+          animationDirection: "normal, alternate",
+        }}
+      />
+    );
+  };
+
   return (
     <div
       className={cn(
@@ -108,69 +138,10 @@ export function AuroraTextEffect({
             // Switched blend mode based on theme to preserve the effect
             className="absolute inset-0 z-10 mix-blend-lighten dark:mix-blend-darken pointer-events-none"
           >
-            {/* First Aurora Layer */}
-            <div
-              className={cn(
-                "absolute w-[60vw] h-[60vw] rounded-[37%_29%_27%_27%/28%_25%_41%_37%] filter mix-blend-overlay",
-                colors.first || "bg-cyan-400",
-                blurAmount
-              )}
-              style={{
-                animationName: "aurora-border, aurora-1",
-                animationDuration: `${animationSpeed.border}s, ${animationSpeed.first}s`,
-                animationTimingFunction: "ease-in-out, ease-in-out",
-                animationIterationCount: "infinite, infinite",
-                animationDirection: "normal, alternate",
-              }}
-            />
-
-            {/* Second Aurora Layer */}
-            <div
-              className={cn(
-                "absolute w-[60vw] h-[60vw] rounded-[37%_29%_27%_27%/28%_25%_41%_37%] filter mix-blend-overlay",
-                colors.second,
-                blurAmount
-              )}
-              style={{
-                animationName: "aurora-border, aurora-2",
-                animationDuration: `${animationSpeed.border}s, ${animationSpeed.second}s`,
-                animationTimingFunction: "ease-in-out, ease-in-out",
-                animationIterationCount: "infinite, infinite",
-                animationDirection: "normal, alternate",
-              }}
-            />
-
-            {/* Third Aurora Layer */}
-            <div
-              className={cn(
-                "absolute w-[60vw] h-[60vw] rounded-[37%_29%_27%_27%/28%_25%_41%_37%] filter mix-blend-overlay",
-                colors.third,
-                blurAmount
-              )}
-              style={{
-                animationName: "aurora-border, aurora-3",
-                animationDuration: `${animationSpeed.border}s, ${animationSpeed.third}s`,
-                animationTimingFunction: "ease-in-out, ease-in-out",
-                animationIterationCount: "infinite, infinite",
-                animationDirection: "normal, alternate",
-              }}
-            />
-
-            {/* Fourth Aurora Layer */}
-            <div
-              className={cn(
-                "absolute w-[60vw] h-[60vw] rounded-[37%_29%_27%_27%/28%_25%_41%_37%] filter mix-blend-overlay",
-                colors.fourth,
-                blurAmount
-              )}
-              style={{
-                animationName: "aurora-border, aurora-4",
-                animationDuration: `${animationSpeed.border}s, ${animationSpeed.fourth}s`,
-                animationTimingFunction: "ease-in-out, ease-in-out",
-                animationIterationCount: "infinite, infinite",
-                animationDirection: "normal, alternate",
-              }}
-            />
+            {renderLayer(activeColors.first, "aurora-1", animationSpeed.first)}
+            {renderLayer(activeColors.second, "aurora-2", animationSpeed.second)}
+            {renderLayer(activeColors.third, "aurora-3", animationSpeed.third)}
+            {renderLayer(activeColors.fourth, "aurora-4", animationSpeed.fourth)}
           </div>
         </h2>
       </div>

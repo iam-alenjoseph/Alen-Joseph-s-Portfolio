@@ -53,7 +53,7 @@ export const Contact = () => {
             <MagneticButton
               variant="outline"
               size="md"
-              onClick={() => window.open("/resume.pdf", "_blank")}
+              onClick={() => window.open(`${import.meta.env.BASE_URL}resume.pdf`, "_blank")}
             >
               <FileText className="mr-2 h-4 w-4" /> Resume
             </MagneticButton>

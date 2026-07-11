@@ -79,7 +79,7 @@ export const ResumeModal = ({ open, onClose }: ResumeModalProps) => {
                 <div className="flex items-center gap-2">
                   {/* Download button */}
                   <a
-                    href="/resume.pdf"
+                    href={`${import.meta.env.BASE_URL}resume.pdf`}
                     download
                     className="flex items-center gap-1.5 text-[11px] font-semibold text-white/70 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-lg px-3 py-1.5 transition-all select-none"
                   >
@@ -92,7 +92,7 @@ export const ResumeModal = ({ open, onClose }: ResumeModalProps) => {
               {/* PDF iframe */}
               <div className="flex-1 bg-[#1a1a1a] overflow-hidden">
                 <iframe
-                  src="/resume.pdf#toolbar=0&navpanes=0&scrollbar=1"
+                  src={`${import.meta.env.BASE_URL}resume.pdf#toolbar=0&navpanes=0&scrollbar=1`}
                   className="w-full h-full border-0"
                   title="Resume PDF"
                 />
