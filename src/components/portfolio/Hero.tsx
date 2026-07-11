@@ -582,6 +582,42 @@ const gradients = [
     metaText: "text-black/45",
     btnBg: "bg-black hover:bg-black/90 text-white border-black/10"
   },
+  {
+    css: "linear-gradient(135deg, #3FE0CE 0%, #FF8B00 50%, #FF0080 100%)",
+    darkText: true,
+    titleText: "text-black",
+    descText: "text-black/70",
+    manifestoText: "text-black/55",
+    metaText: "text-black/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-black/10"
+  },
+  {
+    css: "linear-gradient(135deg, #FB5B7D 0%, #B36FBC 50%, #6A82FC 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #4E53C8 0%, #7074E2 50%, #8F94FA 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
+  {
+    css: "linear-gradient(135deg, #0F8CC6 0%, #808C7E 50%, #EE8E38 100%)",
+    darkText: false,
+    titleText: "text-white",
+    descText: "text-white/75",
+    manifestoText: "text-white/60",
+    metaText: "text-white/45",
+    btnBg: "bg-black hover:bg-black/90 text-white border-white/10"
+  },
 ];
 
 // ─── Hero ──────────────────────────────────────────────────────────────────────
@@ -593,8 +629,8 @@ export const Hero = ({ onOpenResume }: { onOpenResume: () => void }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setPrevSloganIndex(sloganIndex);
-      // Use 3770 (Least Common Multiple of 13, 5, and 58) so that we cycle through all slogans and all gradients.
-      setSloganIndex((prev) => (prev + 1) % 3770);
+      // Use 4030 (Least Common Multiple of 13, 5, and 62) so that we cycle through all slogans and all gradients.
+      setSloganIndex((prev) => (prev + 1) % 4030);
     }, 5000);
     return () => clearInterval(timer);
   }, [sloganIndex]);
