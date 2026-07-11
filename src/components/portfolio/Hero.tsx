@@ -422,7 +422,8 @@ export const Hero = ({ onOpenResume }: { onOpenResume: () => void }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setPrevSloganIndex(sloganIndex);
-      setSloganIndex((prev) => (prev + 1) % slogans.length);
+      // Use 195 (Least Common Multiple of 13, 5, and 39) so that we cycle through all slogans and all gradients.
+      setSloganIndex((prev) => (prev + 1) % 195);
     }, 5000);
     return () => clearInterval(timer);
   }, [sloganIndex]);
@@ -430,6 +431,7 @@ export const Hero = ({ onOpenResume }: { onOpenResume: () => void }) => {
   const quoteIndex = sloganIndex % quotes.length;
   const index = sloganIndex % gradients.length;
   const prevIndex = prevSloganIndex % gradients.length;
+  const currentSloganIndex = sloganIndex % slogans.length;
   const g = gradients[index];
 
   return (
@@ -469,13 +471,13 @@ export const Hero = ({ onOpenResume }: { onOpenResume: () => void }) => {
               className={`absolute font-display font-extrabold text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-tight transition-colors duration-1000 ${g.titleText} flex flex-col items-center w-full px-4`}
             >
               <motion.span variants={childVariants} className="block text-center">
-                {slogans[sloganIndex].line1}
+                {slogans[currentSloganIndex].line1}
               </motion.span>
               <motion.span
                 variants={childVariants}
                 className="font-serif-italic font-normal italic mt-1 block text-center"
               >
-                {slogans[sloganIndex].line2}
+                {slogans[currentSloganIndex].line2}
               </motion.span>
             </motion.h1>
           </AnimatePresence>
