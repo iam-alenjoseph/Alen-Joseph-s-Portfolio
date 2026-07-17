@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Code2, Terminal, Settings, FileText } from "lucide-react";
+import { GraduationCap, Code2, Terminal, Settings, FileText, Briefcase } from "lucide-react";
 import { CountUp } from "../lightswind/count-up";
 import GlassFolder from "../lightswind/glass-folder";
 
@@ -51,11 +51,16 @@ export const About = () => {
                   <Terminal className="h-5 w-5 text-primary" />
                   <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest">Profile</span>
                 </div>
-                <div className="space-y-2 text-sm leading-relaxed text-muted-foreground max-w-md">
-                  <p>I study Computer Applications.</p>
-                  <p>I intern at <span className="text-foreground font-medium">VisionX IT Services</span>, building real interfaces for real clients.</p>
-                  <p>Algorithms. Data structures. Interfaces that hold up.</p>
-                  <p className="text-foreground font-medium">Good code doesn't announce itself. It just works.</p>
+                <div className="space-y-4 text-sm leading-relaxed text-muted-foreground max-w-md">
+                  <p>
+                    Hi, I'm <span className="text-foreground font-medium">Alen Joseph</span>. I'm a developer currently pursuing my Bachelor of Computer Applications.
+                  </p>
+                  <p>
+                    I specialize in building fast, scalable, and beautifully designed web applications. I believe that strong fundamentals in algorithms and data structures are just as important as the visual interfaces that users interact with.
+                  </p>
+                  <p className="text-foreground font-medium italic">
+                    "Good code doesn't announce itself. It just works."
+                  </p>
                 </div>
               </div>
               <div className="mt-8 font-mono text-[10px] text-muted-foreground/60 italic">
@@ -162,6 +167,43 @@ export const About = () => {
               <p className="font-mono text-sm text-muted-foreground leading-relaxed">
                 {techStack.join(" · ")}
               </p>
+            </div>
+          </motion.div>
+
+          {/* Card 5: Internship */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="md:col-span-3 glass rounded-[2rem] p-8 md:p-10 flex flex-col justify-between border border-border/40 min-h-[160px]"
+          >
+            <div>
+              <div className="flex items-center gap-2 mb-6">
+                <Briefcase className="h-5 w-5 text-primary" />
+                <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest">Experience</span>
+              </div>
+              <div className="flex flex-col md:flex-row gap-6 md:gap-12 md:items-center">
+                <div className="flex-1">
+                  <h3 className="font-display font-bold text-2xl text-foreground">
+                    VisionX IT Services
+                  </h3>
+                  <p className="text-sm font-mono text-primary mt-2 uppercase tracking-wide">
+                    Full Stack Web Dev Intern
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-3 leading-relaxed max-w-2xl">
+                    A brief 15-day stint exploring practical full-stack web development and contributing to real-world projects.
+                  </p>
+                </div>
+                <div className="md:text-right shrink-0 mt-4 md:mt-0">
+                  <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-xs font-mono mb-2">
+                    Completed
+                  </div>
+                  <p className="text-xs text-muted-foreground/60">
+                    June 2026
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
 
